@@ -1,13 +1,228 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --black-clr: #000000;
+  --white-clr: #ffffff;
+
+  --primary-clr: #ff7070;
+  --primary_red-clr: #ff0000;
+  --primary_dark-clr: #c90b0b;
+  --primary_darkest-clr: #4f2323;
+
+  --primary_light-clr: #fccfcf;
+
+  --gray-clr: #c2c2c2;
+  --gray-lightest-clr: #f2f2f2;
+  --gray-light-clr: #dad7d7;
+  --gray-dark-clr: #8c8989;
+
+  /* Remaining colors to add */
+}
+
+/* ----------------------fonts------------------- */
+@font-face {
+  font-family: "helvetica";
+  src: url(./assests/fonts/Helvetica.ttf);
+}
+@font-face {
+  font-family: "helvetica light";
+  src: url(./assests/fonts/helvetica-Light.ttf);
+}
+@font-face {
+  font-family: "helvetica bold";
+  src: url(./assests/fonts/Helvetica-Bold.ttf);
+}
+@font-face {
+  font-family: "italiana";
+  src: url(./assests/fonts/Italiana-Regular.ttf);
+}
+body {
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+}
+img,
+video {
+  object-fit: cover;
+}
+
+li {
+  list-style-type: none;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.25s;
+}
+li,
+a {
+  cursor: pointer;
+}
+
+.opacityZero {
+  filter: opacity(0);
+  opacity: 0;
+}
+
+.container {
+  margin-inline: auto;
+  /* max-width: 1190px; */
+  max-width: 1180px;
+  /* padding-inline: 1.5rem; */
+  overflow: hidden;
+  /* padding-inline: 2rem; */
+}
+
+.headline-1,
+.headline-2 {
+  font-family: "italiana", "helvetica", sans-serif;
+  font-weight: 300;
+}
+.headline-1 {
+  font-size: 7.1vmax;
+
+  color: var(--primary-clr);
+}
+.headline-2 {
+  font-size: 10.5vmax;
+
+  padding-inline: 0.1rem;
+  color: var(--black-clr);
+}
+.txt-black {
+  color: var(--black-clr);
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 1.5rem;
+  min-width: 210px;
+  max-height: fit-content;
+  /* font-family: "helvetica light"; */
+
+  font-weight: 500;
+  /* align-self: center; */
+  /* background-color: rgba(255, 255, 255, 0.5); */
+
+  backdrop-filter: blur(5px);
+
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+  /* flex: 0 0 200px; */
+  transition: 0.3s;
+}
+.btn a {
+  text-shadow: none !important;
+}
+.btn-arr {
+  position: absolute;
+  right: 5%;
+  transition: 0.6s;
+}
+.btn-pr {
+  background-color: transparent;
+  border: 1px var(--primary_darkest-clr) solid;
+}
+.btn-pr:hover {
+  background: var(--primary_light-clr);
+  background-color: var(--primary_darkest-clr);
+  /* background-color: var(--black-clr); */
+  color: var(--white-clr);
+}
+.btn-pr img {
+  transition: 0.3s;
+}
+.btn-pr:hover img {
+  filter: invert(1);
+}
+.btn-pr:hover a {
+  color: var(--white-clr) !important;
+}
+.btn-pr:hover > svg > path {
+  fill: var(--white-clr) !important;
+}
+.btn-pr:hover .btn-arr {
+  transition-delay: 0.2s;
+
+  right: 0%;
+  /* transition: 0.6s; */
+}
+
+.grid_box {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.25fr;
+}
+.txt-center {
+  text-align: center;
+  width: 100%;
+  margin-inline: auto;
+}
+.lead,
+.lead-2,
+.lead-3 {
+  font-family: "helvetica";
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+.lead,
+.lead-2,
+.lead-3 > * {
+  position: relative;
+  z-index: 2;
+  padding-right: 0.3rem;
+}
+.lead {
+  color: var(--gray-light-clr);
+}
+.lead-2 {
+  color: var(--primary-clr);
+  position: relative;
+  top: -10%;
+}
+.lead-3 {
+  color: var(--white-clr);
+  font-size: 3.3rem;
+}
+.pad-0 {
+  padding: 0;
+}
+.pad-y-5 {
+  padding-block: 5rem 10rem;
+}
+.price-tag {
+  display: inline-block;
+  position: relative;
+  color: var(--white-clr);
+  /* display: flex; */
+  z-index: 1;
+}
+.price-tag::before {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-clr);
+  top: 25%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.price-tag-small {
+  width: 150px;
+  height: 150px;
 }
