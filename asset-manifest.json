@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/guoa/static/css/main.f9480b05.chunk.css",
-    "main.js": "/guoa/static/js/main.6778050f.chunk.js",
-    "main.js.map": "/guoa/static/js/main.6778050f.chunk.js.map",
+    "main.css": "/guoa/static/css/main.0639e55c.chunk.css",
+    "main.js": "/guoa/static/js/main.121ca04b.chunk.js",
+    "main.js.map": "/guoa/static/js/main.121ca04b.chunk.js.map",
     "runtime-main.js": "/guoa/static/js/runtime-main.2bbe3aff.js",
     "runtime-main.js.map": "/guoa/static/js/runtime-main.2bbe3aff.js.map",
     "static/js/2.19195d2b.chunk.js": "/guoa/static/js/2.19195d2b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2461b9d5.chunk.js": "/guoa/static/js/3.2461b9d5.chunk.js",
     "static/js/3.2461b9d5.chunk.js.map": "/guoa/static/js/3.2461b9d5.chunk.js.map",
     "index.html": "/guoa/index.html",
-    "static/css/main.f9480b05.chunk.css.map": "/guoa/static/css/main.f9480b05.chunk.css.map",
+    "static/css/main.0639e55c.chunk.css.map": "/guoa/static/css/main.0639e55c.chunk.css.map",
     "static/js/2.19195d2b.chunk.js.LICENSE.txt": "/guoa/static/js/2.19195d2b.chunk.js.LICENSE.txt",
     "static/media/index.css": "/guoa/static/media/helvetica-Light.6e816f78.ttf",
     "static/media/App.css": "/guoa/static/media/blackbg.1dd99701.jpg",
@@ -18,7 +18,12 @@
     "static/media/female_1.10164a46.png": "/guoa/static/media/female_1.10164a46.png",
     "static/media/jeans.dd94883e.mp4": "/guoa/static/media/jeans.dd94883e.mp4",
     "static/media/male_1.12d251eb.png": "/guoa/static/media/male_1.12d251eb.png",
+    "static/media/male_2.51385f87.jpg": "/guoa/static/media/male_2.51385f87.jpg",
+    "static/media/male_3.cbea002f.png": "/guoa/static/media/male_3.cbea002f.png",
     "static/media/rounded_text.d439e841.svg": "/guoa/static/media/rounded_text.d439e841.svg",
+    "static/media/scw_1.c3e94629.svg": "/guoa/static/media/scw_1.c3e94629.svg",
+    "static/media/scw_2.12bc9ea0.svg": "/guoa/static/media/scw_2.12bc9ea0.svg",
+    "static/media/scw_3.1d8e48cb.svg": "/guoa/static/media/scw_3.1d8e48cb.svg",
     "static/media/shirts.971feb9f.mp4": "/guoa/static/media/shirts.971feb9f.mp4",
     "static/media/shoe_demo.912d4720.png": "/guoa/static/media/shoe_demo.912d4720.png",
     "static/media/shoes.2aa2ed61.mp4": "/guoa/static/media/shoes.2aa2ed61.mp4",
@@ -28,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.2bbe3aff.js",
     "static/js/2.19195d2b.chunk.js",
-    "static/css/main.f9480b05.chunk.css",
-    "static/js/main.6778050f.chunk.js"
+    "static/css/main.0639e55c.chunk.css",
+    "static/js/main.121ca04b.chunk.js"
   ]
 }
