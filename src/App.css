@@ -179,7 +179,8 @@ btn:hover .navlinks_list-item a:nth-child(2) {
 .hero_wrapper {
   display: grid;
   grid-template-columns: 1fr 1.3fr 1fr;
-  grid-template-rows: 12vmax repeat(3, 17vmax);
+  /* grid-template-rows: 12vmax repeat(3, 17vmax); */
+  grid-template-rows: 156px repeat(3, 160px);
   grid-template-areas:
     "h1 h1 m1"
     ". . m1"
@@ -195,25 +196,25 @@ btn:hover .navlinks_list-item a:nth-child(2) {
 .hero-item.headline-1 {
   z-index: 1;
   position: relative;
-  left: 10.6vmax;
+  left: 8.4rem;
   grid-area: h1;
 }
 img.hero_navigation-img {
-  width: 27vmax;
-  height: 45vmax;
+  width: 100%;
+  height: 100%;
 }
 .rounded_text-wrapper img {
   position: relative;
   /* margin-top: 3rem; */
   /* top: 20vmin; */
-  left: 10vmin;
+  left: 3rem;
 }
 .rounded_text-wrapper {
   /* background-color: yellowgreen; */
   position: relative;
   /* bottom: 12vmax; */
   /* kk */
-  bottom: -8vmax;
+  bottom: -13rem;
   grid-area: h2;
   display: flex;
   align-self: center;
@@ -223,9 +224,17 @@ img.hero_navigation-img {
   /* z-index: 1; */
 }
 .hero-item.rounded_text-wrapper img {
-  width: 30vmax;
+  width: 300px;
   border-radius: 50%;
-  animation: spin 20s linear 0s infinite forwards;
+  animation: move-geo-bg 20s linear 0s infinite forwards;
+}
+@keyframes move-geo-bg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .hero-item.rounded_text-wrapper:hover {
   transform: scale(1.3);
@@ -233,6 +242,10 @@ img.hero_navigation-img {
 }
 
 .hero_navigation-card {
+  /* width: 27vmax; */
+  /* height: 45vmax; */
+  width: 350;
+  height: 582px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -485,17 +498,29 @@ img.hero_navigation-img {
 /* pickupPage :end ........................................................... */
 /* ShowcasePage :start ........................................................... */
 .showcase_wrapper {
-  margin-block: 5rem;
+  margin-block: 5rem 0;
 }
 .showcase_item {
   display: block;
   /* background-color: var(--gray-lightest-clr); */
+  overflow: hidden;
   position: relative;
+}
+.showcase_item-box {
   width: 250px;
   height: 250px;
   flex: 1 1;
-  overflow: hidden;
 }
+.showcase_item-potrait {
+  width: 340px;
+  height: 545px;
+  flex: 1 0 340px;
+  border-right: 1px solid red;
+}
+.showcase_item-potrait img {
+  width: 100%;
+}
+
 .showcase_ribbon-left_box,
 .showcase_ribbon-right_box {
   max-height: 500px;
@@ -512,7 +537,16 @@ img.hero_navigation-img {
 .showcase_ribbon-right_box {
   grid-column: 7/-1 !important;
 }
-.showcase_item-img {
+.showcase_item-price {
+  font-size: 1.7rem;
+  color: var(--primary_dark-clr);
+}
+.showcase_item-box .showcase_item-price {
+  position: absolute;
+  top: 0;
+  padding: 0.4rem;
+}
+.showcase_item-box .showcase_item-img {
   position: absolute;
   left: 0;
   width: 100%;
@@ -521,7 +555,7 @@ img.hero_navigation-img {
   transition: 0.9s;
 }
 
-.showcase_item:hover .showcase_item-img {
+.showcase_item-box:hover .showcase_item-img {
   left: 2%;
 }
 .showcase_item-details {
@@ -530,7 +564,6 @@ img.hero_navigation-img {
   display: flex;
   justify-content: space-between;
   padding: 0.2rem;
-  align-items: center;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -540,26 +573,75 @@ img.hero_navigation-img {
   padding: 0.4rem;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .showcase_item-actions {
   transition: 0.5s;
-  position: absolute;
-  transform: translateY(50%);
-  top: 100%;
-  right: 0;
   display: flex;
   gap: 0.3rem;
+}
+
+.showcase_item-box .showcase_item-actions {
+  align-items: center;
+  /* transform: translateY(50%); */
+
+  position: relative;
+  top: 50px;
+
+  right: 0;
   padding-inline: 0.3rem;
 }
-.showcase_item:hover .showcase_item-actions {
+.showcase_item-potrait .showcase_item-details {
+  font-size: 1.4rem;
+  flex-direction: column-reverse;
+  background-color: var(--white-clr);
+  padding: 0;
+}
+.showcase_item-box:hover .showcase_item-actions {
   top: 0;
 }
+.showcase_item-potrait .showcase_item-actions {
+  position: relative;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  background-color: var(--white-clr);
+  left: 0;
+}
+.showcase_item-potrait:hover .showcase_item-actions {
+  top: -40px;
+}
+
+.showcase_item-potrait .showcase_item-actions lord-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.showcase_item-potrait .showcase_item-info {
+  padding: 0 !important;
+  background-color: var(--white-clr);
+}
+.flex_90 {
+  position: relative;
+  z-index: 1;
+  background-color: var(--white-clr);
+  display: flex;
+  padding: 0.3rem;
+  justify-content: space-between;
+}
+
 lord-icon {
   transition: 0.3s;
 }
 lord-icon:hover {
   cursor: pointer;
   transform: scale(1.4);
+}
+.shocase_item-details {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .showcase_ribbon-wrapper {
   margin-bottom: 1rem;
@@ -580,6 +662,7 @@ lord-icon:hover {
   width: 100%;
   height: 100%;
 }
+
 .showcase_navigation-action {
   position: absolute;
   left: 0%;
@@ -596,5 +679,44 @@ lord-icon:hover {
 .showcase_navigation-action:hover {
   text-decoration: underline;
   color: var(--gray-light-clr);
+}
+
+/* SHowcase page potrit wala  */
+.showcase-potrait-wrapper {
+  perspective: 300px;
+  perspective-origin: center;
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding: 0;
+  overflow-x: auto;
+}
+.showcase-potrait-wrapper > * {
+  background: var(--white-clr);
+}
+/* showcase-wrapper class style here. i missed the part of bg-modern-shapes-animationable component  */
+/* thats why i'm doing that work here  */
+.showcase-container-wrapper {
+  position: relative;
+  top: 0%;
+  /* z-index: -1; */
+}
+.showcase-wrapper_bg-img {
+  position: absolute;
+  top: -5%;
+  z-index: -1;
+  animation: move-geo-bg 20s linear 0s infinite forwards;
+}
+img.showcase-wrapper_bg-img.showcase-wrapper_bg-img-3 {
+  top: 17%;
+}
+
+img.showcase-wrapper_bg-img.showcase-wrapper_bg-img-2 {
+  top: 9%;
+  left: -17%;
+}
+img.showcase-wrapper_bg-img.showcase-wrapper_bg-img-1 {
+  top: -5%;
+  left: -17%;
 }
 /* ShowcasePage :end ........................................................... */

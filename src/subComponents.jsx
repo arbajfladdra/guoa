@@ -1,6 +1,7 @@
 // navlinks components here
 import bTN from "../src/assests/images/btn_2.png";
 import * as Icons from "./Icons";
+// import Model from "./assests/images/male_2.jpg";
 
 export const NavLinkDoubleEffect = ({ name, link }) => {
   return (
@@ -111,10 +112,11 @@ export const ShowCaseBoxItem = ({ name, price, img, path }) => {
   return (
     <a href={path} className="showcase_item-box showcase_item">
       <img className="showcase_item-img" src={img} />
+      <p className="showcase_item-price">{price}/-</p>
+
       <div className="showcase_item-details">
         <div className="showcase_item-info">
           <p className="showcase_item-name">{name}</p>
-          <p className="showcase_item-price">{price}/-</p>
         </div>
         <div className="showcase_item-actions">
           <p className="love_it">
@@ -131,7 +133,32 @@ export const ShowCaseBoxItem = ({ name, price, img, path }) => {
     </a>
   );
 };
-
+export const ShowCasePotraitItem = ({ name, price, img, path }) => {
+  return (
+    <a href="path" className="showcase_item showcase_item-potrait">
+      <img src={img} alt="" className="showcase_item-img" />
+      <div className="showcase_item-details">
+        <div className="showcase_item-info">
+          <div className="flex_90">
+            <p className="showcase_item-name">name</p>
+            <p className="showcase_item-price">899/-</p>
+          </div>
+        </div>
+        <div className="showcase_item-actions">
+          <p className="love_it">
+            <Icons.Heart />
+          </p>
+          <p className="add_to_cart">
+            <Icons.Eye />
+          </p>
+          <p className="watch_later">
+            <Icons.Cart />
+          </p>
+        </div>
+      </div>
+    </a>
+  );
+};
 export const Video = ({ src, className }) => {
   return (
     <video src={src} autoPlay loop muted className={className}>
